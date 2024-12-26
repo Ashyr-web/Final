@@ -1,0 +1,159 @@
+/* Сброс стилей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Тело страницы */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    background: linear-gradient(to right, #1e3c72, #2a5298); /* Градиент для фона */
+    background-size: cover;
+    background-attachment: fixed;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Стиль для звездного фона */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+/* Навигация */
+.navbar {
+    margin-bottom: 20px;
+    background: rgba(0, 0, 0, 0.8); /* Полупрозрачный темный фон */
+    border-radius: 10px;
+}
+
+.navbar .navbar-brand {
+    font-weight: bold;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+    color: #000; /* Черный цвет текста */
+    font-size: 1rem;
+    padding: 10px 20px; /* Добавлен отступ для улучшения видимости */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffcc00; /* Желтый цвет текста при наведении */
+    background-color: rgba(255, 204, 0, 0.2); /* Легкая подсветка фона при наведении */
+}
+
+/* Баннер */
+.bg-primary {
+    background: rgba(0, 0, 0, 0.7);
+    background-image: url('https://www.w3schools.com/w3images/space.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    padding: 60px 0;
+    text-align: center;
+}
+
+.bg-primary h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 3px 3px 7px rgba(0, 0, 0, 0.7);
+}
+
+.bg-primary p {
+    font-size: 1.2rem;
+}
+
+/* Заголовки */
+h1, h2, h3 {
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Карточки (для Портфолио и Блога) */
+.card {
+    border: 2px solid #ffcc00;
+    border-radius: 15px;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
+    color: #fff;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    object-fit: cover;
+    height: 200px;
+    width: 100%;
+    filter: brightness(70%);
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffcc00;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #ccc;
+}
+
+.card .btn {
+    background-color: #ffcc00;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.card .btn:hover {
+    background-color: #fff;
+    color: #ffcc00;
+}
+
+/* Секции и отступы */
+.container {
+    padding-top: 30px;
+}
+
+/* Адаптивность */
+@media (max-width: 767px) {
+    .navbar .navbar-brand {
+        font-size: 1.2rem;
+    }
+
+    .navbar-nav .nav-item {
+        margin: 0;
+    }
+
+    .card img {
+        height: 150px;
+    }
+
+    .bg-primary h1 {
+        font-size: 2.5rem;
+    }
+}
